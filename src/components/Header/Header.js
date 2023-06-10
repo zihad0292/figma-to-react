@@ -2,7 +2,7 @@ import React from "react";
 
 // MUI components
 import { AppBar, Toolbar, IconButton } from "@mui/material";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 // MUI icons
 import { Menu } from "@mui/icons-material";
