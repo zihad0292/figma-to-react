@@ -61,14 +61,15 @@ function Sidebar({ drawerOpen, handleDrawerClose, menuItems }) {
                     borderTop: "1px solid #696563",
                     pt: 0,
                     pb: 0,
+                    pr: 0,
+                    pl: 7,
                     backgroundColor: "#3E4143",
-                    // "&:hover": {
-                    //   backgroundColor: "#3E4143",
-                    // },
                   }}
                 >
-                  <ListItemIcon>{/* Child Item Icon */}</ListItemIcon>
                   <ListItemText primary={childItem} />
+                  <ListItemIcon>
+                    <ExpandMore color="iconWhite" />
+                  </ListItemIcon>
                 </ListItemButton>
               ))}
             </List>
@@ -95,12 +96,16 @@ function Sidebar({ drawerOpen, handleDrawerClose, menuItems }) {
     paddingBottom: 0,
     background: "#343739",
     color: "#fff",
+    "& .MuiAlert-action ": {
+      paddingTop: 0,
+    },
     "& .MuiIconButton-root": {
-      color: "#FFBF3C",
+      alignSelf: "center",
       paddingTop: 0,
       paddingBottom: 0,
       "& .MuiSvgIcon-root ": {
-        fontSize: "14px",
+        color: "#FFBF3C",
+        fontSize: "16px",
       },
     },
   });

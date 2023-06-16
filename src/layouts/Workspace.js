@@ -31,32 +31,32 @@ const WorkSpace = () => {
   const menuItems = [
     {
       text: "Settings",
-      icon: <Settings />,
+      icon: <Settings color="iconWhite" />,
       items: ["Lift 1", "Turn Table 1", "Lift 3"],
     },
     {
       text: "Recent",
-      icon: <RestoreOutlined />,
+      icon: <RestoreOutlined color="iconWhite" />,
       items: ["Lift 1", "Turn Table 1", "Lift 3"],
     },
     {
       text: "Facility Props",
-      icon: <WidgetsRounded />,
+      icon: <WidgetsRounded color="iconWhite" />,
       items: ["Lift 1", "Turn Table 1", "Lift 3"],
     },
     {
       text: "Rooms",
-      icon: <TabUnselectedRounded />,
+      icon: <TabUnselectedRounded color="iconWhite" />,
       items: ["Lift 1", "Turn Table 1", "Lift 3"],
     },
     {
       text: "Conveyors",
-      icon: <TramRounded />,
+      icon: <TramRounded color="iconWhite" />,
       items: ["Lift 1", "Turn Table 1", "Lift 3", "Turn Table 3"],
     },
     {
       text: "Carriers",
-      icon: <RvHookupRounded />,
+      icon: <RvHookupRounded color="iconWhite" />,
       items: [
         "Lift 1",
         "Turn Table 1",
@@ -72,7 +72,7 @@ const WorkSpace = () => {
     },
     {
       text: "Shelf Groups",
-      icon: <SplitscreenRounded />,
+      icon: <SplitscreenRounded color="iconWhite" />,
       items: ["Lift 1", "Turn Table 1", "Lift 3"],
     },
     // Add more menu items as needed
