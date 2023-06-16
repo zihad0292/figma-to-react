@@ -6,18 +6,30 @@ import { CssBaseline } from "@mui/material";
 import Workspace from "./layouts/Workspace";
 
 const theme = createTheme({
+  typography: {
+    fontFamily: "Inter, sans-serif", // Use the same font family name specified in the Google Fonts link tag
+    fontSize: 12,
+  },
   palette: {
     white: {
-      // Purple and green play nicely together.
       main: "#fff",
       contrastText: "#000",
     },
-    custom2: {
-      // This is green.A700 as hex.
-      main: "#009688",
-      contrastText: "#fff",
+    textMain: {
+      main: "#4D4F5C",
+    },
+    textLight: {
+      main: "#838296",
+    },
+    textDark: {
+      main: "#4D4D4D",
+    },
+    orange: {
+      main: "#FFBF3C",
+      contrastText: "#000",
     },
     contrastThreshold: 4.5,
+    // 61BD63 - green color
   },
 });
 
