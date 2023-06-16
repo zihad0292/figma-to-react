@@ -24,12 +24,25 @@ const theme = createTheme({
     textDark: {
       main: "#4D4D4D",
     },
+    iconWhite: {
+      main: "#fff",
+    },
+    iconGreen: {
+      main: "#61BD63",
+    },
     orange: {
       main: "#FFBF3C",
       contrastText: "#000",
     },
     contrastThreshold: 4.5,
     // 61BD63 - green color
+  },
+  components: {
+    MuiSvgIcon: {
+      defaultProps: {
+        htmlColor: "#53575A",
+      },
+    },
   },
 });
 
