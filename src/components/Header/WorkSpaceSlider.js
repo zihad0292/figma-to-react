@@ -107,6 +107,7 @@ function WorkSpaceSlider() {
                   fontSize: "16px",
                   textTransform: "unset",
                   fontWeight: "400",
+                  marginLeft: "-5px",
                 }}
               >
                 {item.text}
