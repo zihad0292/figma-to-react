@@ -16,6 +16,39 @@ import { styled } from "@mui/material/styles";
 // MUI icons
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 
+const CustomSidebar = styled(Drawer)({
+  "& .MuiDrawer-paper": {
+    background: "#494D50",
+    color: "#fff",
+    position: "absolute",
+    left: "8px", // Adjust the desired distance from the left edge
+    top: "72px", // Adjust the desired distance from the top edge
+    borderRadius: "5px",
+  },
+  "& .MuiListItemIcon-root": {
+    color: "#fff",
+  },
+});
+
+const MenuTitle = styled(Alert)({
+  paddingTop: 0,
+  paddingBottom: 0,
+  background: "#343739",
+  color: "#fff",
+  "& .MuiAlert-action ": {
+    paddingTop: 0,
+  },
+  "& .MuiIconButton-root": {
+    alignSelf: "center",
+    paddingTop: 0,
+    paddingBottom: 0,
+    "& .MuiSvgIcon-root ": {
+      color: "#FFBF3C",
+      fontSize: "16px",
+    },
+  },
+});
+
 function Sidebar({ drawerOpen, handleDrawerClose, menuItems }) {
   const [expandItems, setExpandItems] = useState({});
 
@@ -78,40 +111,8 @@ function Sidebar({ drawerOpen, handleDrawerClose, menuItems }) {
       );
     });
 
-  const Sidebar = styled(Drawer)({
-    "& .MuiDrawer-paper": {
-      background: "#494D50",
-      color: "#fff",
-      position: "absolute",
-      left: "8px", // Adjust the desired distance from the left edge
-      top: "72px", // Adjust the desired distance from the top edge
-      borderRadius: "5px",
-    },
-    "& .MuiListItemIcon-root": {
-      color: "#fff",
-    },
-  });
-  const MenuTitle = styled(Alert)({
-    paddingTop: 0,
-    paddingBottom: 0,
-    background: "#343739",
-    color: "#fff",
-    "& .MuiAlert-action ": {
-      paddingTop: 0,
-    },
-    "& .MuiIconButton-root": {
-      alignSelf: "center",
-      paddingTop: 0,
-      paddingBottom: 0,
-      "& .MuiSvgIcon-root ": {
-        color: "#FFBF3C",
-        fontSize: "16px",
-      },
-    },
-  });
-
   return (
-    <Sidebar
+    <CustomSidebar
       anchor="left"
       open={drawerOpen}
       onClose={handleDrawerClose}
@@ -131,7 +132,7 @@ function Sidebar({ drawerOpen, handleDrawerClose, menuItems }) {
       >
         {renderMenuItems(menuItems)}
       </List>
-    </Sidebar>
+    </CustomSidebar>
   );
 }
 

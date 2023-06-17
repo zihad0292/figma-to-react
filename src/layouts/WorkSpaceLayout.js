@@ -14,10 +14,11 @@ import {
   SplitscreenRounded,
 } from "@mui/icons-material";
 
+// Sub components
 import Header from "../components/Header/Header";
 import Sidebar from "../components/Sidebar/Sidebar";
 
-const WorkSpace = () => {
+const WorkSpaceLayout = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -113,5 +114,5 @@ const WorkSpace = () => {
   );
 };
 
-export default WorkSpace;
+export default WorkSpaceLayout;
 

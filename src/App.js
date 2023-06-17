@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 
 // import Layout
-import Workspace from "./layouts/Workspace";
+import WorkSpaceLayout from "./layouts/WorkSpaceLayout";
 
 const theme = createTheme({
   typography: {
@@ -34,6 +34,10 @@ const theme = createTheme({
       main: "#FFBF3C",
       contrastText: "#000",
     },
+    buttonDark: {
+      main: "#53575A",
+      contrastText: "#fff",
+    },
     contrastThreshold: 4.5,
     // 61BD63 - green color
   },
@@ -50,7 +54,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Workspace />
+      <WorkSpaceLayout />
     </ThemeProvider>
   );
 }

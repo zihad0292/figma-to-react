@@ -43,6 +43,7 @@ function ProfileMenu({ open, handleClose, anchorRef }) {
                   "& .MuiMenuItem-root": {
                     pl: 3,
                     pr: 3,
+                    minHeight: "auto",
                   },
                 }}
               >
