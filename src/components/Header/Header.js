@@ -50,7 +50,7 @@ function Header({ handleDrawerOpen }) {
   };
 
   return (
-    <CustomAppBar position="static" color="white" elevation={1}>
+    <CustomAppBar position="static" color="white" elevation={0}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <HamburgerIcon edge="start" onClick={handleDrawerOpen}>
           <MenuIcon color="iconWhite" />
