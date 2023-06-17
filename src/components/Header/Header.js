@@ -20,6 +20,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 // Sub components
 import ProfileMenu from "./ProfileMenu";
+import WorkSpaceSlider from "./WorkSpaceSlider";
 
 const CustomAppBar = styled(AppBar)({});
 
@@ -50,73 +51,89 @@ function Header({ handleDrawerOpen }) {
 
   return (
     <CustomAppBar position="static" color="white" elevation={1}>
-      <Toolbar>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         <HamburgerIcon edge="start" onClick={handleDrawerOpen}>
           <MenuIcon color="iconWhite" />
         </HamburgerIcon>
-        <Box sx={{ flexGrow: 1 }} />
-        <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          {/* Header right icons */}
-          <IconButton size="large">
-            <BorderColorRoundedIcon />
-          </IconButton>
-          <IconButton size="large">
-            <WifiRoundedIcon color="iconGreen" />
-          </IconButton>
-          <IconButton size="large">
-            <QuestionAnswerRoundedIcon />
-          </IconButton>
-          <IconButton size="large">
-            <Badge
-              badgeContent={<FiberManualRecordRoundedIcon />}
-              color="orange"
-              variant="dot"
-              overlap="circular"
-            >
-              <NotificationsRoundedIcon />
-            </Badge>
-          </IconButton>
-          <Divider
-            orientation="vertical"
-            flexItem
-            light
-            sx={{
-              height: "30px",
-              alignSelf: "center",
-            }}
-          />
+        <Divider
+          orientation="vertical"
+          flexItem
+          light
+          sx={{
+            height: "30px",
+            alignSelf: "center",
+            display: { xs: "none", sm: "none", md: "none", lg: "flex" },
+          }}
+        />
+        <Box
+          sx={{
+            display: { xs: "none", sm: "none", md: "none", lg: "flex" },
+          }}
+        >
+          <WorkSpaceSlider />
+        </Box>
+        {/* Header right icons */}
+        <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <IconButton size="large">
+              <BorderColorRoundedIcon />
+            </IconButton>
+            <IconButton size="large">
+              <WifiRoundedIcon color="iconGreen" />
+            </IconButton>
+            <IconButton size="large">
+              <QuestionAnswerRoundedIcon />
+            </IconButton>
+            <IconButton size="large">
+              <Badge
+                badgeContent={<FiberManualRecordRoundedIcon />}
+                color="orange"
+                variant="dot"
+                overlap="circular"
+              >
+                <NotificationsRoundedIcon />
+              </Badge>
+            </IconButton>
+            <Divider
+              orientation="vertical"
+              flexItem
+              light
+              sx={{
+                height: "30px",
+                alignSelf: "center",
+              }}
+            />
+          </Box>
           {/* User menu */}
-          <Box sx={{ flexGrow: 0 }}>
-            <Box
-              sx={{ display: "flex", alignItems: "center" }}
-              id="composition-button"
-              aria-controls={open ? "composition-menu" : undefined}
-              aria-expanded={open ? "true" : undefined}
-              aria-haspopup="true"
-              onClick={handleToggle}
+          <Box
+            sx={{ display: "flex", alignItems: "center" }}
+            id="composition-button"
+            aria-controls={open ? "composition-menu" : undefined}
+            aria-expanded={open ? "true" : undefined}
+            aria-haspopup="true"
+            onClick={handleToggle}
+          >
+            <Button
+              ref={anchorRef}
+              variant="text"
+              endIcon={<KeyboardArrowDownIcon />}
+              sx={{
+                textTransform: "unset",
+              }}
+              color="textMain"
             >
-              <Button
-                ref={anchorRef}
-                variant="text"
-                endIcon={<KeyboardArrowDownIcon />}
-                sx={{
-                  textTransform: "unset",
-                }}
-                color="textMain"
-              >
-                John Doe
-              </Button>
+              John Doe
+            </Button>
 
-              <IconButton
-                sx={{
-                  "& .MuiSvgIcon-root": {
-                    color: "#009DB3",
-                  },
-                }}
-              >
-                <Face3Icon />
-              </IconButton>
-            </Box>
+            <IconButton
+              sx={{
+                "& .MuiSvgIcon-root": {
+                  color: "#009DB3",
+                },
+              }}
+            >
+              <Face3Icon />
+            </IconButton>
             {/* Menu items */}
             <ProfileMenu
               open={open}
