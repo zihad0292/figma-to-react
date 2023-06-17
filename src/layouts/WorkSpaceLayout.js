@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-// MUI components
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 
 // MUI icons
 import {
@@ -17,6 +16,9 @@ import {
 // Sub components
 import Header from "../components/Header/Header";
 import Sidebar from "../components/Sidebar/Sidebar";
+
+// View
+import PageContent from "../Views/PageContent/PageContent";
 
 const WorkSpaceLayout = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -80,36 +82,19 @@ const WorkSpaceLayout = () => {
   ];
 
   return (
-    <div>
+    <div style={{ background: "#EAEAEA" }}>
+      {/* Left Sidebar */}
       <Sidebar
         drawerOpen={drawerOpen}
         handleDrawerClose={handleDrawerClose}
         menuItems={menuItems}
       />
+      {/* Header and navigation */}
       <Header handleDrawerOpen={handleDrawerOpen} />
-
-      <Grid container spacing={2}>
-        <Grid item xs={2}>
-          {/* Content for grid item 1 */}
-        </Grid>
-        <Grid item xs={2}>
-          {/* Content for grid item 2 */}
-        </Grid>
-        <Grid item xs={2}>
-          {/* Content for grid item 3 */}
-        </Grid>
-        <Grid item xs={2}>
-          {/* Content for grid item 4 */}
-        </Grid>
-        <Grid item xs={2}>
-          {/* Content for grid item 5 */}
-        </Grid>
-        <Grid item xs={2}>
-          {/* Content for grid item 6 */}
-        </Grid>
-      </Grid>
-
-      {/* Add other main component content as needed */}
+      {/* Page content */}
+      <Box p={1.5}>
+        <PageContent />
+      </Box>
     </div>
   );
 };
