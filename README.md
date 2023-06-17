@@ -1,6 +1,6 @@
 # Figma To React
 
-This project is a React application where I converted part of a Figma design into a functional user interface (UI) using Material UI. It serves as a demonstration of my skills in translating designs into functional components and UI elements.
+This project is a React application where I converted part of a Figma design into a functional user interface (UI) using Material UI. It serves as a demonstration of my skills in translating designs into functional components and UI elements. [Live link](https://figma-to-react-by-zihad.netlify.app/)
 
 ## Requirements
 Node.js version 16.17 or higher
