@@ -7,7 +7,6 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 // Mui icons
@@ -16,6 +15,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import SettingsIcon from "@mui/icons-material/Settings";
 import CloseIcon from "@mui/icons-material/Close";
 
+// Card bottom right icon
 const ExpandMore = styled(props => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -28,7 +28,7 @@ const ExpandMore = styled(props => {
 }));
 
 export default function CustomCard({
-  sx = [],
+  sx = [], // allow sx prop in the custom component
   title,
   expandIconColor,
   children,

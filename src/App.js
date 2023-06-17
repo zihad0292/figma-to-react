@@ -5,9 +5,10 @@ import { CssBaseline } from "@mui/material";
 // import Layout
 import WorkSpaceLayout from "./layouts/WorkSpaceLayout";
 
+// Customize the MUI theme
 const theme = createTheme({
   typography: {
-    fontFamily: "Inter, sans-serif", // Use the same font family name specified in the Google Fonts link tag
+    fontFamily: "Inter, sans-serif",
     fontSize: 12,
   },
   palette: {
